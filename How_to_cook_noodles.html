@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DA BOYZ WEEKEND</title>
+    <style> 
+        .poga{
+            background-color: coral;
+            color:white;
+            font-size: 30px;
+            width: 200px;
+            height: 70px;
+            cursor: pointer;
+        }
+
+        .poga:hover{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Get 10 points to see my favorite video</h1>
+
+    <div class="nottroll"></div>
+
+    <h3>Result: <span class="result">0</span></h3>
+
+    <button class="poga">Add</button>
+</body>
+<script>
+    const button = document.querySelector('.poga')
+    const result = document.querySelector('.result')
+    const musicVideo = document.querySelector('.nottroll')
+
+    let number = 0
+    
+    button.addEventListener('click',() => {
+        number = number + 1
+        result.innerHTML = number
+        if(number >= 10){
+           musicVideo.innerHTML =  `<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Click here to receive your prize.</a>`
+        }
+    } )
+
+</script>
+</html>
